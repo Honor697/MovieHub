@@ -1,0 +1,45 @@
+:root{
+  --bg:#0b0b0b;
+  --muted:#9aa4b2;
+  --accent:#e50914;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter, system-ui, Arial, sans-serif;background:var(--bg);color:#fff}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:12px 20px;background:linear-gradient(180deg, rgba(0,0,0,.6), transparent);position:sticky;top:0;z-index:50}
+.logo{font-weight:700;color:var(--accent)}
+.nav-right{display:flex;align-items:center;gap:.5rem}
+.nav-right input{padding:.5rem .75rem;border-radius:4px;border:0;background:#111;color:#fff;width:200px}
+.nav-right button{background:transparent;border:0;color:#fff;font-size:16px;cursor:pointer;padding:.4rem}
+
+.banner{height:56vh;display:flex;align-items:flex-end;padding:28px;background-size:cover;background-position:center;position:relative}
+.banner .info{max-width:60%}
+.banner h1{font-size:2.2rem;margin:0 0 .5rem}
+.banner p{color:var(--muted);line-height:1.4}
+.btn{display:inline-block;padding:.6rem 1rem;border-radius:6px;margin-right:.5rem;border:0;cursor:pointer}
+.btn-play{background:#fff;color:#000}
+.btn-list{background:rgba(255,255,255,.12);color:#fff;border:1px solid rgba(255,255,255,.18)}
+
+.rows{padding:18px}
+.row{margin-bottom:18px}
+.row h3{margin:0 0 .6rem}
+.row-scroller{display:flex;gap:8px;overflow-x:auto;padding-bottom:6px}
+.poster{min-width:160px;border-radius:6px;overflow:hidden;cursor:pointer;flex-shrink:0}
+.poster img{display:block;width:100%;height:240px;object-fit:cover}
+
+/* modal */
+.modal{position:fixed;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.7);z-index:200}
+.modal.hidden{display:none}
+.modal-content{background:#0e0e0e;padding:18px;border-radius:8px;max-width:900px;width:92%;max-height:85vh;overflow:auto;position:relative}
+.close{position:absolute;right:12px;top:10px;background:transparent;border:0;color:#fff;font-size:26px}
+
+/* small screens */
+@media (max-width:768px){
+  .banner{height:40vh;padding:16px}
+  .banner h1{font-size:1.4rem}
+  .poster img{height:160px}
+  .nav-right input{width:120px}
+}
+
+/* auth/account cards (app.js will inject these) */
+.auth-card, .account-card{background:#071019;padding:18px;border-radius:8px;max-width:420px;margin:24px auto}
+.auth-card input{display:block;width:100%;padding:10px;margin:8px 0;border-radius:6px;border:0;background:#0b0b0b;color:#fff}

@@ -1,0 +1,44 @@
+<!-- client/index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Netflix Clone (Vanilla JS)</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
+</head>
+<body>
+  <div id="app">
+    <nav class="nav">
+      <div class="logo">MovieHub</div>
+      <div class="nav-right">
+        <input id="searchInput" placeholder="Search movies..." />
+        <button id="btnSearch" title="Search"><i class="fa fa-search"></i></button>
+        <button id="navAccount" data-link="#account"><i class="fa fa-user"></i></button>
+      </div>
+    </nav>
+
+    <main>
+      <section id="banner" class="banner"></section>
+
+      <section id="rows" class="rows"></section>
+    </main>
+
+    <!-- modal -->
+    <div id="modal" class="modal hidden">
+      <div class="modal-content">
+        <button id="modalClose" class="close">&times;</button>
+        <div id="modalBody"></div>
+      </div>
+    </div>
+
+    <!-- simple auth/account panel (hash routing) -->
+    <div id="route-root"></div>
+
+    <footer class="footer">Demo MovieHub • TMDb content</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

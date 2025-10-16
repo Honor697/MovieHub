@@ -1,0 +1,15 @@
+[
+  {
+    "id": "1760325678322",
+    "name": "Honor",
+    "email": "gabriel@example.com",
+    "passwordHash": "$2b$10$tJwCe/cU4oXGWxgmzWhm2.XVo8lrxu4umjGcEJdCvGulpQwR8KKK2",
+    "watchlist": [
+      {
+        "id": 157336,
+        "title": "Interstellar",
+        "poster_path": "/gEU2QniE6E77NI6lCU6MxlNBvIx.jpg"
+      }
+    ]
+  }
+]
