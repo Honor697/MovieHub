@@ -28,7 +28,11 @@ if (!TMDB_API_KEY) {
 if (!fs.existsSync(USERS_FILE)) fs.writeFileSync(USERS_FILE, JSON.stringify([]));
 
 app.use(express.json());
-app.use(cors()); // during development; tighten in production
+// app.use(cors()); // during development; 
+app.use(cors({
+  origin: ['https://moviehub-3sw3.onrender.com', 'http://localhost:5000'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+})); // tighten in production
 
 // helper: read/write users
 function readUsers() {

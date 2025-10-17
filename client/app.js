@@ -1,5 +1,5 @@
 // client/app.js
-const API_BASE = 'http://localhost:5000'; // same origin (server serves client). If server at different origin, set 'http://localhost:5000'
+const API_BASE = ''; // same origin (server serves client). If server at different origin, set 'http://localhost:5000'
 const imageBase = 'https://image.tmdb.org/t/p'; // TMDb image base (sizes used below)
 
 // utilities
@@ -225,7 +225,7 @@ async function openModal(movieId){
   const res = await apiFetch('/api/movie/' + movieId);
   if (!res.ok) { modalBody.innerText = 'Failed to load movie'; return; }
   const m = await res.json();
-  const poster = m.poster_path ? tmdbConfig.images.secure_base_url + 'w500' + m.poster_path : 'assets/placeholder.jpg';
+  const poster = m.poster_path ? tmdbConfig.images.secure_base_url + 'w500' + m.poster_path : '/assets/placeholder.jpg';
   const title = m.title || m.name;
   const trailer = (m.videos && m.videos.results && m.videos.results.find(v=>v.type==='Trailer')) || null;
   modalBody.innerHTML = `
